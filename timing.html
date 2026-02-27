@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vertical Bars – Timing Functions</title>
+<style>
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+  }
+
+  .container {
+    width: 260px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+
+  .bar {
+    width: 30px;
+    height: 80px;
+    background: #4caf50;
+    animation: moveDown 2.5s infinite;
+  }
+
+  .bar:nth-child(1) {
+    animation-timing-function: linear;
+  }
+
+  .bar:nth-child(2) {
+    animation-timing-function: ease;
+  }
+
+  .bar:nth-child(3) {
+    animation-timing-function: ease-in;
+  }
+
+  .bar:nth-child(4) {
+    animation-timing-function: ease-out;
+  }
+
+  .bar:nth-child(5) {
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes moveDown {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(220px);
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
+</body>
+</html>
