@@ -8,6 +8,8 @@ import Products from './components/Products'
 import Navbar from './components/Navbar'
 import NotFound from './components/NotFound'
 import User from './components/User'
+import Users from './components/Users'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
@@ -15,7 +17,7 @@ const App = () => {
     <Navbar/>
     <Routes>
       <Route path='/' element={<Home/>} />
-      <Route path="/user" element={<Navigate to="/user/1" replace />} />
+      <Route path="/users" element={<Users />} />
       <Route path='/user/:id' element={<User />} />
       <Route path='/about' element={<About/>} />
       <Route path='/blog' element={<Blog/>} />
